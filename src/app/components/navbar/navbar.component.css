@@ -1,0 +1,12 @@
+nav {
+	background-color: #267ba9 !important;
+	color: #fff;
+	padding-left: calc(10vw);
+	padding-right: calc(10vw);
+}
+li.nav-item a.nav-link {
+	color: #fff;
+}
+li.nav-item.active a.nav-link {
+	border-bottom: 0.1em solid #fff;
+}
