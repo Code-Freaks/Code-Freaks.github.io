@@ -12,6 +12,7 @@ import { MdToHtmlPipe } from './pipe/md-to-html.pipe';
 import { DatePipe } from '@angular/common';
 import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
 import { ReadblogComponent } from './components/readblog/readblog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -31,6 +32,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
   ],
   providers: [

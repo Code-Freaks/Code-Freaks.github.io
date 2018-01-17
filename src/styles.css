@@ -5,4 +5,12 @@
 *{
 	font-family: "Montserrat", "Helvetica Neue", sans-serif;
 	font-size: 0.99em;
+	font-weight: 300;
+}
+.content-wrapper .content {
+    margin: 1em;
+    padding: 1em;
+    border-top: solid #267ba9;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 2px #E4E4E4;
 }

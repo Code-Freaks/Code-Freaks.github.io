@@ -1,15 +1,16 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row content-wrapper">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h2 class="posts-heading">Posts</h2>
-            <div *ngFor="let blog of blogs">
-                <div class="blog-wrapper">
-                    <small class="text-muted">{{ blog.date | date:'shortDate'}}</small><br>
-                    <a [routerLink]="['/read', blog.title]">
-                        {{ blog.title }}
-                    </a>
-
+            <div class="content">
+                <h2 class="posts-heading">Posts</h2>
+                <div *ngFor="let blog of blogs">
+                    <div *ngIf="blog.isPublished" class="blog-wrapper">
+                        <small class="text-muted">{{ blog.date | date:'shortDate'}}</small><br>
+                        <a [routerLink]="['/read', blog.link]">
+                            {{ blog.title }}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,8 +1,9 @@
 nav {
-	background-color: #267ba9 !important;
+	background-color: #1a4865 !important;
 	color: #fff;
 	padding-left: calc(10vw);
 	padding-right: calc(10vw);
+	border-bottom: 1px solid #e8e8e8;
 }
 li.nav-item a.nav-link {
 	color: #fff;

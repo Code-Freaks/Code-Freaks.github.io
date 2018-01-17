@@ -1,4 +1,6 @@
-export interface Blog{
+export interface BlogListItem {
 	title: String,
-	date:String
+	date: String,
+	link: String,
+	isPublished: Boolean
 }
