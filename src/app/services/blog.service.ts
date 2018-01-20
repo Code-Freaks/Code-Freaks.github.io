@@ -14,11 +14,11 @@ export class BlogService {
   }
 
   getBlogList(): Observable<BlogListItem[]> {
-     return this.http.get(this.base_url + 'blog-data.json')
+     return this.http.get(this.base_url + 'blog-data.json');
   }
-  getBlog(link: string){
-      link = link.replace('-', '/')
-      return this.http.get(this.base_url + link + '.md', {responseType: 'text'})
+  getBlog(link: string) {
+      link = link.replace('-', '/');
+      return this.http.get(this.base_url + link + '.md', {responseType: 'text'});
   }
   markdownToHtml(md: string) {
       return marked(md);

@@ -10,7 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BloglistComponent } from './components/bloglist/bloglist.component';
 import { MdToHtmlPipe } from './pipe/md-to-html.pipe';
 import { DatePipe } from '@angular/common';
-import { NgbCollapse } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReadblogComponent } from './components/readblog/readblog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
@@ -28,12 +28,12 @@ const routes: Routes = [
     NavbarComponent,
     BloglistComponent,
     MdToHtmlPipe,
-    NgbCollapse,
     ReadblogComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
+    NgbCollapseModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
   ],

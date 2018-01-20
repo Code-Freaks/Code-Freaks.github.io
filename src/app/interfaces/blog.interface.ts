@@ -1,6 +1,6 @@
 export interface BlogListItem {
-	title: String,
-	date: String,
-	link: String,
-	isPublished: Boolean
+    title: string;
+    date: string;
+    link: string;
+    isPublished: Boolean;
 }

@@ -15,11 +15,11 @@ export class ReadblogComponent implements OnInit {
 
   ngOnInit() {
       this.route.paramMap.switchMap(
-          params =>{
-              let title = params.get('title')
-              return this.blogService.getBlog(title)
+          params => {
+              const title = params.get('title');
+              return this.blogService.getBlog(title);
           }
-    ).subscribe(data => this.content = data)
+    ).subscribe(data => this.content = data);
 
    }
 

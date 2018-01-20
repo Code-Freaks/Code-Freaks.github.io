@@ -5,7 +5,7 @@ import { BlogService } from '../services/blog.service';
 })
 export class MdToHtmlPipe implements PipeTransform {
 
-  constructor(private blogService: BlogService){
+  constructor(private blogService: BlogService) {
 
   }
   transform(value: string): any {
