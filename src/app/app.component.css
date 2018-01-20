@@ -2,8 +2,3 @@
 	min-height: calc(100vh - 4em);
 	background-color: #eee;
 }
-.footer{
-	background-color: #1a4865 !important;
-	color: #fff;
-	border-bottom: 1px solid #e8e8e8;
-}

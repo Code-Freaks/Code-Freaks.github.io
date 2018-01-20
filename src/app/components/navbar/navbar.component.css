@@ -11,3 +11,8 @@ li.nav-item a.nav-link {
 li.nav-item.active a.nav-link {
 	border-bottom: 0.1em solid #fff;
 }
+
+.navbar-brand, .navbar-brand :hover{
+	color: #fff !important;
+	text-decoration: none !important;
+}

@@ -1,0 +1,16 @@
+.footer{
+	background-color: #1a4865 !important;
+	color: #fff;
+	border-bottom: 1px solid #e8e8e8;
+	position: ABSOLUTE;
+    width: 100%;
+    top: calc(100% - 2.3em);
+	height: 4em;
+	padding-top: 0.4em;
+	text-align: center;
+	cursor: pointer;
+}
+.footer:hover span{
+	text-shadow: 0.1em 0.1em 0.4em #fff;
+	color: beige;
+}
