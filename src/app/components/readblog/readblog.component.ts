@@ -11,6 +11,7 @@ import 'rxjs/add/operator/switchMap';
 })
 export class ReadblogComponent implements OnInit {
   public content: string;
+  public isLoaded = false;
   constructor( private route: ActivatedRoute, private blogService: BlogService) { }
 
   ngOnInit() {
@@ -19,7 +20,10 @@ export class ReadblogComponent implements OnInit {
               const title = params.get('title');
               return this.blogService.getBlog(title);
           }
-    ).subscribe(data => this.content = data);
+    ).subscribe(data => {
+        this.content = data;
+        this.isLoaded = true;
+    });
 
    }
 

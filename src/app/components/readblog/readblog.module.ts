@@ -4,7 +4,7 @@ import { ReadblogComponent } from './readblog.component';
 import { BlogService } from '../../services/blog.service';
 import { MdToHtmlPipe } from '../../pipe/md-to-html.pipe';
 import { Router, Routes, RouterModule } from '@angular/router';
-
+import { SpinnerModule } from '../spinner/spinner.module';
 const readblogRouter: Routes = [
     {
         path: '',
@@ -14,6 +14,7 @@ const readblogRouter: Routes = [
 @NgModule({
   imports: [
       CommonModule,
+      SpinnerModule,
       RouterModule.forChild(readblogRouter)
     ],
   declarations: [

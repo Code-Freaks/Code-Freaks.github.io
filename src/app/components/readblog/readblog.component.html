@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="row content-wrapper">
+    <div *ngIf="isLoaded; else spinner" class="row content-wrapper">
         <div class="col-md-2"></div>
         <div class="col-md-8 content">
             <div [innerHTML]="content | mdToHtml"></div>
@@ -7,3 +7,6 @@
         <div class="col-md-2"></div>
     </div>
 </div>
+<ng-template #spinner>
+    <app-spinner></app-spinner>
+</ng-template>

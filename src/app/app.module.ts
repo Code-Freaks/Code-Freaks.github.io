@@ -14,9 +14,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { BlogListModule } from './components/bloglist/bloglist.module';
 import { ReadBlogModule } from './components/readblog/readblog.module';
+import { SpinnerModule } from './components/spinner/spinner.module';
+
 const routes: Routes = [
   { path: '', loadChildren: 'app/components/bloglist/bloglist.module#BlogListModule' },
-  { path: 'home',  component: BloglistComponent },
+  // { path: 'home',  component: SpinnerComponent },
   { path: 'read/:title', loadChildren: 'app/components/readblog/readblog.module#ReadBlogModule'},
   { path: '**', redirectTo: 'home' }
 ];
@@ -25,7 +27,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    // SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ const routes: Routes = [
     HttpClientModule,
     BlogListModule,
     ReadBlogModule,
+    SpinnerModule,
     RouterModule.forRoot(routes, { useHash: true }),
   ],
   providers: [
