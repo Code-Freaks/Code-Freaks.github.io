@@ -8,38 +8,35 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BlogService } from './services/blog.service';
 import { RouterModule, Routes } from '@angular/router';
 import { BloglistComponent } from './components/bloglist/bloglist.component';
-import { MdToHtmlPipe } from './pipe/md-to-html.pipe';
-import { DatePipe } from '@angular/common';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReadblogComponent } from './components/readblog/readblog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { BlogListModule } from './components/bloglist/bloglist.module';
+import { ReadBlogModule } from './components/readblog/readblog.module';
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', loadChildren: 'app/components/bloglist/bloglist.module#BlogListModule' },
   { path: 'home',  component: BloglistComponent },
-  { path: 'read/:title', component: ReadblogComponent},
-  { path: '**', redirectTo: '/home' }
+  { path: 'read/:title', loadChildren: 'app/components/readblog/readblog.module#ReadBlogModule'},
+  { path: '**', redirectTo: 'home' }
 ];
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    BloglistComponent,
-    MdToHtmlPipe,
-    ReadblogComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
     NgbCollapseModule,
     HttpClientModule,
-    RouterModule.forRoot(routes),
+    BlogListModule,
+    ReadBlogModule,
+    RouterModule.forRoot(routes, { useHash: true }),
   ],
   providers: [
-      BlogService,
-      DatePipe
+      BlogService
   ],
   bootstrap: [AppComponent]
 })
